@@ -30,10 +30,10 @@ if proceed:
   load_dotenv()
 
   response = requests.get(
-    "https://api.newscatcherapi.com/v2/search", 
+    "https://api.newscatcherapi.com/v2/search",
     headers = {
       "x-api-key": os.getenv("NEWSCATCHER_API_KEY")
-    }, 
+    },
     params = {
       "q": query.replace(" ", "-").lower(),
       "lang": "en",
@@ -110,14 +110,14 @@ if proceed:
       print(f"{Style.BRIGHT}\n\tSave generated posts to FastLearn API? {Fore.LIGHTGREEN_EX}(yes) {Fore.RESET}", end="")
 
       save_generated_posts = input()
-  
+
     save_generated_posts = True if save_generated_posts == "" or save_generated_posts == "yes" or save_generated_posts == "y" else False
 
     if save_generated_posts:
       # requests.post(
-      #   "https://fastlearn-api.herokuapp.com/post/generator", 
+      #   "https://fastlearn-api.herokuapp.com/post/generator",
       #   headers = {
-      #     "authorization": 
+      #     "authorization":
       #   },
       #   data = {
       #     "posts": posts
