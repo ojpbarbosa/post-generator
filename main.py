@@ -47,21 +47,14 @@ if proceed:
 
     posts = []
     for article in articles:
-      title = article["title"]
-      image = article["media"]
-      content = article["summary"].replace("\n", " ").replace("  ", " ")
-      votes = article["rank"]
-      author = article["author"]
-      date = article["published_date"]
-
       post = {
-        "author": author,
-        "content": content,
+        "author": article["author"],
+        "content": article["summary"].replace("\n", " ").replace("  ", " "),
         "community": query.lower(),
-        "date": date,
-        "image": image,
-        "title": title,
-        "votes": votes
+        "date": article["published_date"],
+        "image": article["media"],
+        "title": article["title"],
+        "votes": article["rank"]
       }
 
       posts.append(post)
