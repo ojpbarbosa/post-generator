@@ -49,6 +49,7 @@ if proceed:
     for article in articles:
       post = {
         "author": article["author"],
+        "comments": [],
         "community": query.lower(),
         "content": article["summary"].replace("\n", " ").replace("  ", " "),
         "date": article["published_date"],
