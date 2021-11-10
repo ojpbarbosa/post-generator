@@ -16,7 +16,7 @@ load_dotenv()
 
 NEWSCATCHER_API_KEY = os.getenv("NEWSCATCHER_API_KEY")
 
-if NEWSCATCHER_API_KEY == "":
+if NEWSCATCHER_API_KEY == "" or NEWSCATCHER_API_KEY == None:
   print(f"{Style.BRIGHT}\n\t{Fore.LIGHTRED_EX}No API key was provided!\n")
 
 else:
