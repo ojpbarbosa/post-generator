@@ -41,9 +41,8 @@ $ pip install -r requirements.txt
 $ python main.py
 ```
 
-## :rocket: Tecnologias
+## :rocket: Technologies
 
-- [FastLearn](https://github.com/obielwb/fastlearn)
 - [Python](https://www.python.org/)
 - [Requests](https://docs.python-requests.org/en/latest/)
 - [Colorama](https://pypi.org/project/colorama/)
@@ -51,7 +50,7 @@ $ python main.py
 - [Newscatcher](https://newscatcherapi.com/)
 
 ## ✍️ Author
-A project made by [João Pedro Barbosa](https://github.com/oJPBarbosa).
+A project made by [João Pedro Ferreira Barbosa](https://github.com/oJPBarbosa).
 
 ## 🌎 License
 This project is under MIT license. Check [LICENSE](https://github.com/oJPBarbosa/fastlearn-post-generator/blob/main/LICENSE) for more information.
