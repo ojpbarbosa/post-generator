@@ -21,7 +21,7 @@
 </p>
 
 ## 🎯 Description
-A post generator that automatically generates [FastLearn's](https://github.com/project-fastlearn) posts using a keyword.
+A post generator that automatically generates [FastLearn's](https://github.com/obielwb/fastlearn) posts using a keyword.
 
 <img alt="fastlearn-post-generator-demo" src="https://user-images.githubusercontent.com/79005271/137407013-14bd07a9-4e61-4a14-ab3f-d72f096d9dde.png">
 
@@ -43,14 +43,14 @@ $ python main.py
 
 ## :rocket: Tecnologias
 
-- [FastLearn](https://github.com/project-fastlearn)
+- [FastLearn](https://github.com/obielwb/fastlearn)
 - [Python](https://www.python.org/)
 - [Requests](https://docs.python-requests.org/en/latest/)
 - [Colorama](https://pypi.org/project/colorama/)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 - [Newscatcher](https://newscatcherapi.com/)
 
-## Author
+## ✍️ Author
 A project made by [João Pedro Barbosa](https://github.com/oJPBarbosa).
 
 ## 🌎 License
