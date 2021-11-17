@@ -20,12 +20,12 @@
   </a>
 </p>
 
-## Description
+## 🎯 Description
 A post generator that automatically generates [FastLearn's](https://github.com/project-fastlearn) posts using a keyword.
 
 <img alt="fastlearn-post-generator-demo" src="https://user-images.githubusercontent.com/79005271/137407013-14bd07a9-4e61-4a14-ab3f-d72f096d9dde.png">
 
-## How to use
+## 🙋 How to use
 
 ```bash
 # Clone this repository
@@ -41,7 +41,7 @@ $ pip install -r requirements.txt
 $ python main.py
 ```
 
-## References
+## :rocket: Tecnologias
 
 - [FastLearn](https://github.com/project-fastlearn)
 - [Python](https://www.python.org/)
@@ -53,5 +53,5 @@ $ python main.py
 ## Author
 A project made by [João Pedro Barbosa](https://github.com/oJPBarbosa).
 
-## License
+## 🌎 License
 This project is under MIT license. Check [LICENSE](https://github.com/oJPBarbosa/fastlearn-post-generator/blob/main/LICENSE) for more information.
