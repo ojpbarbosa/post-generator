@@ -38,7 +38,8 @@ def main():
 
         print(f"{Style.BRIGHT}\n\tSelect a {Fore.LIGHTGREEN_EX}language!")
 
-        print(f"{Style.BRIGHT}\n\t{Fore.LIGHTGREEN_EX}Available languages{Fore.LIGHTMAGENTA_EX}:\n")
+        print(
+            f"{Style.BRIGHT}\n\t{Fore.LIGHTGREEN_EX}Available languages{Fore.LIGHTMAGENTA_EX}:\n")
 
         available_languages = ["🌍 Afrikaans", "👳 Arabic", "🇧🇬 Bulgarian", "🌏 Bengali", "🇪🇸 Catalan", "🇨🇿 Czech", "🇬🇧 Welsh", "🇨🇳 Chinese", "🇩🇰 Danish", "🇩🇪 German",
                                "🇬🇷 Greek", "🇺🇸 English", "🇪🇸 Spanish", "🇪🇪 Estonian", "🇮🇷 Farsi", "🇫🇮 Finnish", "🇫🇷 French", "🇬🇺 Guam", "🇮🇱 Hebrew", "🇮🇳 Hindi", "🇭🇷 Croatian",
@@ -68,23 +69,25 @@ def main():
         emojized_language = ""
         for available_language in available_languages:
             if selected_language.lower() == available_language.lower()[2:].replace(" ", ""):
-                language = language_codes[available_languages.index(available_language)]
+                language = language_codes[available_languages.index(
+                    available_language)]
                 emojized_language = available_language
                 break
 
         while language == "":
-                print(
-                        f"{Style.BRIGHT}\n\t{Fore.LIGHTRED_EX}Invalid language!")
-                print(
-                        f"{Style.BRIGHT}\t{Fore.LIGHTYELLOW_EX}Language{Fore.LIGHTMAGENTA_EX}:{Fore.LIGHTGREEN_EX} ", end="")
+            print(
+                f"{Style.BRIGHT}\n\t{Fore.LIGHTRED_EX}Invalid language!")
+            print(
+                f"{Style.BRIGHT}\t{Fore.LIGHTYELLOW_EX}Language{Fore.LIGHTMAGENTA_EX}:{Fore.LIGHTGREEN_EX} ", end="")
 
-                selected_language = input()
-                
-                for available_language in available_languages:
-                    if selected_language.lower() == available_language.lower()[2:].replace(" ", ""):
-                        language = language_codes[available_languages.index(available_language)]
-                        emojized_language = available_language
-                        break
+            selected_language = input()
+
+            for available_language in available_languages:
+                if selected_language.lower() == available_language.lower()[2:].replace(" ", ""):
+                    language = language_codes[available_languages.index(
+                        available_language)]
+                    emojized_language = available_language
+                    break
 
         print(f"{Style.BRIGHT}\n\tHit {Fore.LIGHTGREEN_EX}[ ENTER ]{Fore.RESET} to search for articles about {Fore.LIGHTYELLOW_EX}" + f'"{query}"' + f"{Fore.RESET} in {emojized_language} or hit {Fore.LIGHTRED_EX}[ CTRL + C ]{Fore.RESET} to abort." +
               f"\n\t{Fore.LIGHTRED_EX}* Note{Fore.LIGHTMAGENTA_EX}:{Fore.RESET} This might take a few seconds.\n\t", end="")
@@ -204,22 +207,22 @@ def main():
 
                     try:
                         for post in posts:
-                                requests.post(url, data={
-                                    "title": post["title"],
-                                    "content": post["content"],
-                                    "image": post["image"],
-                                    "author": post["author"],
-                                    "created_at": post["created_at"]
-                                })
+                            requests.post(url, data={
+                                "title": post["title"],
+                                "content": post["content"],
+                                "image": post["image"],
+                                "author": post["author"],
+                                "created_at": post["created_at"]
+                            })
 
                         print(f"{Style.BRIGHT}\n\tThe posts about {Fore.LIGHTYELLOW_EX}" + f'"{query}"' +
-                            f"{Fore.RESET} were {Fore.LIGHTGREEN_EX}successfully pushed to your API!")
+                              f"{Fore.RESET} were {Fore.LIGHTGREEN_EX}successfully pushed to your API!")
                     except Exception as err:
                         print(f"{Style.BRIGHT}\n\tAn {Fore.LIGHTRED_EX}error{Fore.RESET} occurred while pushing the posts to your API!\n\tError message{Fore.LIGHTMAGENTA_EX}: {Fore.LIGHTYELLOW_EX}" + f'"{err}"')
 
-
             elif response["status"] == "error":
-                print(f"{Style.BRIGHT}\tAn {Fore.LIGHTRED_EX}error{Fore.RESET} occurred while generating posts.\n\tError message{Fore.LIGHTMAGENTA_EX}: {Fore.LIGHTYELLOW_EX}" + f'"{response["message"]}"')
+                print(f"{Style.BRIGHT}\tAn {Fore.LIGHTRED_EX}error{Fore.RESET} occurred while generating posts.\n\tError message{Fore.LIGHTMAGENTA_EX}: {Fore.LIGHTYELLOW_EX}" +
+                      f'"{response["message"]}"')
 
             else:
                 print(f"{Style.BRIGHT}\t{Fore.LIGHTRED_EX}No articles{Fore.RESET} about {Fore.LIGHTYELLOW_EX}" +
