@@ -167,9 +167,13 @@ def main():
 
                     Path(Path.cwd() / "posts").mkdir(parents=True, exist_ok=True)
 
-                    with open(f"posts/{str(time.time()).split('.')[0]}-{query.replace(' ', '-')}.json", "w", encoding="utf-8") as f:
+                    posts_filename = f"{str(time.time()).split('.')[0]}-{query.replace(' ', '-')}.json"
+                    with open("posts/" + posts_filename, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     f.close()
+
+                    print(f"{Style.BRIGHT}\n\tPosts{Fore.LIGHTGREEN_EX}successfully saved{Fore.RESET} as {Fore.LIGHTYELLOW_EX}" + f'"{posts_filename}"' + f"{Fore.RESET} in {Fore.LIGHTYELLOW_EX}" + f'"{Path.cwd() / "posts"}"' + f"{Fore.RESET}.")
+
 
                 print(
                     f"{Style.BRIGHT}\n\tPush posts to your API? {Fore.LIGHTGREEN_EX}(yes) {Fore.RESET}", end="")
