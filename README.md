@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="post-generator" src="https://user-images.githubusercontent.com/79005271/149629689-2fe41c4c-9b09-454d-a35a-fcaf9616893a.png">
+  <img alt="post-generator" src="https://user-images.githubusercontent.com/79005271/151849365-951f464b-341e-4f02-b5a4-da49c5c1cb60.png">
 </p>
 
 <p align="center">
@@ -21,6 +21,7 @@
 </p>
 
 ## 🎯 Description
+
 A simple yet useful and versatile post generator.
 
 ## 🙋 How to use
@@ -33,7 +34,7 @@ $ git clone https://github.com/oJPBarbosa/post-generator.git
 $ cd post-generator
 
 # Install the requirements
-$ pip install -r requirements.txt 
+$ pip install -r requirements.txt
 
 # Run the app
 $ python main.py
@@ -48,7 +49,9 @@ $ python main.py
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 
 ## ✍️ Author
+
 A project made by [João Pedro Ferreira Barbosa](https://github.com/oJPBarbosa).
 
 ## 🌎 License
+
 This project is under MIT license. Check [LICENSE](https://github.com/oJPBarbosa/post-generator/blob/main/LICENSE) for more information.
